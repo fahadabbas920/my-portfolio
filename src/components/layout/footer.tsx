@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { siteConfig } from "@/data/site";
 import { navLinks } from "@/data/nav";
 import { GitHubIcon, LinkedInIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { Container } from "@/components/ui/container";
+import { SectionLink } from "@/components/ui/section-link";
 
 export function Footer() {
   return (
@@ -54,13 +54,13 @@ export function Footer() {
         <nav aria-label="Footer">
           <ul className="grid grid-cols-2 gap-x-10 gap-y-2 sm:flex sm:flex-wrap sm:items-center sm:justify-end sm:gap-x-8 sm:gap-y-2">
             {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
+              <li key={link.hash}>
+                <SectionLink
+                  hash={link.hash}
                   className="text-sm text-fg-muted transition-colors hover:text-fg"
                 >
                   {link.label}
-                </Link>
+                </SectionLink>
               </li>
             ))}
           </ul>
