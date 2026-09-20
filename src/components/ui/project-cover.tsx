@@ -11,7 +11,7 @@ export function ProjectCover({
   return (
     <div
       className={`relative overflow-hidden bg-surface ${
-        size === "sm" ? "aspect-[16/10]" : "aspect-[21/9]"
+        size === "sm" ? "aspect-16/10" : "aspect-21/9"
       }`}
     >
       <Image

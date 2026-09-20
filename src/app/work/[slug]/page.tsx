@@ -65,8 +65,8 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
           <ProjectCover project={project} size="lg" />
         </div>
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-          <div className="space-y-10">
+        <div className="mt-14 grid min-w-0 gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+          <div className="min-w-0 space-y-10">
             <div>
               <h2 className="font-mono text-xs uppercase tracking-wide text-fg-subtle">
                 Overview
@@ -103,7 +103,7 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
             </div>
           </div>
 
-          <div className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+          <div className="min-w-0 space-y-6 lg:sticky lg:top-24 lg:self-start">
             <div className="rounded-2xl border border-border bg-surface p-6">
               <h2 className="font-mono text-xs uppercase tracking-wide text-fg-subtle">
                 Technology
@@ -126,11 +126,11 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
         </div>
 
         {prev || next ? (
-          <div className="mt-16 flex items-center justify-between gap-4 border-t border-border pt-8 text-sm">
+          <div className="mt-16 flex flex-col gap-3 border-t border-border pt-8 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4">
             {prev ? (
               <Link
                 href={`/work/${prev.slug}`}
-                className="text-fg-muted transition-colors hover:text-fg"
+                className="min-w-0 text-fg-muted transition-colors hover:text-fg"
               >
                 ← {prev.name}
               </Link>
@@ -140,7 +140,7 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
             {next ? (
               <Link
                 href={`/work/${next.slug}`}
-                className="text-fg-muted transition-colors hover:text-fg"
+                className="min-w-0 text-fg-muted transition-colors hover:text-fg sm:text-right"
               >
                 {next.name} →
               </Link>
