@@ -39,7 +39,7 @@ The contact form at the bottom of the page posts to `/api/contact`, which sends 
 1. Sign up at [resend.com](https://resend.com) using the **same email address** as `siteConfig.email` in `src/data/site.ts` (currently `fahadabbas920@gmail.com`).
 2. Create an API key at [resend.com/api-keys](https://resend.com/api-keys).
 3. Add it to `.env.local`: `RESEND_API_KEY=re_xxxxxxxx`.
-4. Add the same variable in your Vercel project's **Settings → Environment Variables** before deploying.
+4. Add the same variable in your hosting provider's environment variable settings before deploying (see [Deploying](#deploying) below).
 
 This setup sends from Resend's shared `onboarding@resend.dev` address, which on the free plan can only deliver to the email you signed up with — that's exactly what you want here, since submissions should land in your own inbox. If you later want the "From" address to look like `@yourdomain.com`, verify a domain in Resend and update the `from` field in `src/app/api/contact/route.ts`.
 
@@ -75,9 +75,26 @@ npm run build
 npm run start
 ```
 
-## Deploying to Vercel
+## Deploying
+
+This app has a server-side API route (`/api/contact`, used by the contact form), so it needs to run as a Node server — a static-file host won't work here.
+
+### Vercel
 
 1. Push this repository to GitHub.
 2. Import it at [vercel.com/new](https://vercel.com/new).
 3. Set the `NEXT_PUBLIC_SITE_URL` and `RESEND_API_KEY` environment variables.
-4. Deploy — Vercel auto-detects Next.js, no extra config needed.
+4. Deploy — Vercel auto-detects Next.js and runs the API route as a serverless function, no extra config needed.
+
+### Render
+
+Use a **Web Service**, not a Static Site — a Static Site only serves pre-built files and can't run `/api/contact`.
+
+1. New → **Web Service**, connect this repository.
+2. Runtime: **Node**.
+3. Build Command: `npm install && npm run build`
+4. Start Command: `npm run start`
+5. Add `NEXT_PUBLIC_SITE_URL` and `RESEND_API_KEY` under Environment.
+6. Leave any "Publish Directory" field blank — it doesn't apply to a Web Service.
+
+A `render.yaml` is included at the repo root, so you can also deploy this as a [Render Blueprint](https://render.com/docs/blueprint-spec) instead of configuring it by hand.
