@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
 import { navLinks } from "@/data/nav";
-import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/icons";
+import { GitHubIcon, LinkedInIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { Container } from "@/components/ui/container";
 
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <Container className="flex flex-col gap-8 py-12 sm:flex-row sm:items-start sm:justify-between">
+      <Container className="flex flex-col gap-8 py-12 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-mono text-sm font-medium text-fg">{siteConfig.name}</p>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-fg-muted">
@@ -39,11 +39,20 @@ export function Footer() {
             >
               <MailIcon className="h-5 w-5" />
             </a>
+            <a
+              href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="WhatsApp"
+              className="text-fg-subtle transition-colors hover:text-fg"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+            </a>
           </div>
         </div>
 
         <nav aria-label="Footer">
-          <ul className="grid grid-cols-2 gap-x-10 gap-y-2 sm:flex sm:flex-col sm:items-end">
+          <ul className="grid grid-cols-2 gap-x-10 gap-y-2 sm:flex sm:flex-wrap sm:items-center sm:justify-end sm:gap-x-8 sm:gap-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link

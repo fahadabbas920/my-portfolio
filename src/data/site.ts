@@ -4,6 +4,7 @@ export const siteConfig = {
   tagline: "Product Engineer & Technical Lead",
   location: "Lahore, Pakistan",
   email: "fahadabbas920@gmail.com",
+  whatsapp: "+923124762751",
   github: "https://github.com/fahadabbas920",
   linkedin: "https://linkedin.com/in/fahadabbas920",
   siteUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://fahadabbas.dev").replace(/\/+$/, ""),

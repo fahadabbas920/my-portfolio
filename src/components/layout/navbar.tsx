@@ -32,7 +32,7 @@ export function Navbar() {
           : "border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 sm:px-8">
+      <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
         <Link
           href="#top"
           className="font-mono text-sm font-medium tracking-tight text-fg"

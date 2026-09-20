@@ -49,8 +49,8 @@ All personal/site content lives in `src/data/` as plain TypeScript objects — n
 
 - `site.ts` — name, role, email, GitHub/LinkedIn links, site URL
 - `nav.ts` — top navigation links
-- `projects.ts` — Selected Work case studies
-- `experience.ts` — professional timeline
+- `projects.ts` — Selected Work case studies (each gets its own page at `/work/<slug>`)
+- `project-lifecycle.ts` — the general project development lifecycle (Process section, and each case study page)
 - `capabilities.ts` — Engineering Capabilities cards
 - `approach.ts` — Engineering Approach principles
 

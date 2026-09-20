@@ -2,7 +2,7 @@ import { projects } from "@/data/projects";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
-import { ProjectCard } from "@/components/ui/project-card";
+import { SelectedWorkGrid } from "@/components/sections/selected-work-grid";
 
 export function SelectedWork() {
   return (
@@ -16,13 +16,7 @@ export function SelectedWork() {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          {projects.map((project, index) => (
-            <Reveal key={project.slug} delay={index * 60}>
-              <ProjectCard project={project} />
-            </Reveal>
-          ))}
-        </div>
+        <SelectedWorkGrid projects={projects} />
       </Container>
     </section>
   );

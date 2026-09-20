@@ -16,6 +16,15 @@ export function LinkedInIcon({ className }: IconProps) {
   );
 }
 
+export function WhatsAppIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z" />
+      <path d="M12.04 2C6.58 2 2.13 6.42 2.13 11.88c0 1.85.5 3.58 1.37 5.07L2 22l5.2-1.46a9.83 9.83 0 0 0 4.84 1.28h.01c5.46 0 9.9-4.42 9.9-9.88C21.95 6.48 17.5 2 12.04 2Zm0 18.03h-.01a8.1 8.1 0 0 1-4.14-1.13l-.3-.18-3.09.87.83-3.05-.19-.31a8.06 8.06 0 0 1-1.24-4.35c0-4.48 3.65-8.13 8.15-8.13 4.5 0 8.15 3.65 8.15 8.13 0 4.48-3.65 8.15-8.16 8.15Z" />
+    </svg>
+  );
+}
+
 export function MailIcon({ className }: IconProps) {
   return (
     <svg
@@ -48,6 +57,24 @@ export function ArrowUpRightIcon({ className }: IconProps) {
     >
       <path d="M7 17 17 7" />
       <path d="M8 7h9v9" />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M19 12H5" />
+      <path d="m11 6-6 6 6 6" />
     </svg>
   );
 }
@@ -86,6 +113,119 @@ export function CloseIcon({ className }: IconProps) {
   );
 }
 
+export function SearchIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="m20 20-4.35-4.35" />
+    </svg>
+  );
+}
+
+export function CompassIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="m14.5 9.5-2 5-3-1.5 2-5 3 1.5Z" />
+    </svg>
+  );
+}
+
+export function ShieldCheckIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M12 3.5 5 6v5.5c0 4.28 2.98 7.85 7 9 4.02-1.15 7-4.72 7-9V6l-7-2.5Z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  );
+}
+
+export function RocketIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M12 2.5c2.5 1.5 4.5 4.5 4.5 8.5 0 2-1 4-2 5.5l-1-2.5h-3l-1 2.5c-1-1.5-2-3.5-2-5.5 0-4 2-7 4.5-8.5Z" />
+      <path d="M9 16.5 6.5 19M15 16.5l2.5 2.5M10 9.5h4" />
+    </svg>
+  );
+}
+
+export function LifeBuoyIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="3.5" />
+      <path d="m6.5 6.5 3 3M17.5 6.5l-3 3M6.5 17.5l3-3M17.5 17.5l-3-3" />
+    </svg>
+  );
+}
+
+const lifecycleIconMap = {
+  search: SearchIcon,
+  compass: CompassIcon,
+  code: CodeIcon,
+  shieldCheck: ShieldCheckIcon,
+  rocket: RocketIcon,
+  lifeBuoy: LifeBuoyIcon,
+};
+
+export type LifecycleIconName = keyof typeof lifecycleIconMap;
+
+export function LifecycleIcon({
+  name,
+  className,
+}: {
+  name: LifecycleIconName;
+  className?: string;
+}) {
+  const Icon = lifecycleIconMap[name];
+  return <Icon className={className} />;
+}
+
 export function LockIcon({ className }: IconProps) {
   return (
     <svg
@@ -113,11 +253,13 @@ const iconMap = {
   users: UsersIcon,
 };
 
+export type CapabilityIconName = keyof typeof iconMap;
+
 export function CapabilityIcon({
   name,
   className,
 }: {
-  name: keyof typeof iconMap;
+  name: CapabilityIconName;
   className?: string;
 }) {
   const Icon = iconMap[name];

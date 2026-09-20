@@ -1,7 +1,7 @@
 import { siteConfig } from "@/data/site";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
-import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/icons";
+import { GitHubIcon, LinkedInIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { ContactForm } from "@/components/ui/contact-form";
 
 export function Contact() {
@@ -26,6 +26,15 @@ export function Contact() {
               >
                 <MailIcon className="h-4 w-4" />
                 {siteConfig.email}
+              </a>
+              <a
+                href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 text-sm text-fg-muted transition-colors hover:text-fg"
+              >
+                <WhatsAppIcon className="h-4 w-4" />
+                WhatsApp
               </a>
               <a
                 href={siteConfig.github}

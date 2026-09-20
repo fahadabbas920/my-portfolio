@@ -5,8 +5,18 @@ import { ArrowUpRightIcon, GitHubIcon, LinkedInIcon } from "@/components/ui/icon
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-20 pb-24 sm:pt-28 sm:pb-32">
-      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 h-full w-full" />
+    <section
+      id="top"
+      className="relative flex min-h-[calc(100dvh-4rem)] flex-col justify-center overflow-hidden py-24"
+    >
+      <div
+        aria-hidden="true"
+        className="hero-bg absolute inset-0 -z-10 h-full w-full overflow-hidden"
+      >
+        <div className="bg-grid hero-grid absolute inset-0 h-full w-full" />
+        <div className="hero-glow hero-glow-1 absolute h-72 w-72 rounded-full bg-accent/12 blur-3xl" />
+        <div className="hero-glow hero-glow-2 absolute h-64 w-64 rounded-full bg-accent/8 blur-3xl" />
+      </div>
 
       <Container>
         <Reveal>

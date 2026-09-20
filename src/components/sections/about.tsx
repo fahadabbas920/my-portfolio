@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
@@ -6,39 +7,40 @@ export function About() {
   return (
     <section id="about" className="py-24 sm:py-32">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+        <Reveal>
+          <SectionHeading eyebrow="About" title="A bit about my work" />
+        </Reveal>
+
+        <div className="mt-14 grid items-center gap-12 lg:grid-cols-[minmax(0,280px)_minmax(0,1fr)]">
           <Reveal>
-            <SectionHeading eyebrow="About" title="A bit about my work" />
+            <div className="aspect-4/5 w-full max-w-60">
+              <Image
+                src="/fahad-portfolio.png"
+                alt="Fahad Abbas"
+                width={560}
+                height={700}
+                className="h-full w-full object-cover rounded-2xl"
+                priority
+              />
+            </div>
           </Reveal>
 
           <Reveal
             delay={80}
-            className="max-w-2xl space-y-5 text-base leading-relaxed text-fg-muted"
+            className="max-w-3xl space-y-5 text-base leading-relaxed text-fg-muted"
           >
             <p>
               I&apos;m a Full-Stack SaaS Engineer and Product Engineer based in Lahore,
-              Pakistan, currently building production software at CloudEva Tech. My background
-              is strongest in frontend engineering — React and Next.js in particular — but my
-              work has grown to span backend services, data modeling, integrations and
-              deployment.
+              Pakistan. My background is strongest in frontend engineering — React and Next.js
+              — but I work end to end: backend services, data modeling, integrations,
+              deployment, and the technical leadership to take a product from requirements to
+              production.
             </p>
             <p>
-              Beyond writing code, I&apos;ve taken on technical leadership across several SaaS
-              projects: understanding requirements, breaking down work, making architectural
-              decisions and coordinating delivery with the rest of the team. I&apos;ve worked
-              on products from their earliest stages through to production, and on existing
-              production systems that needed to keep evolving without breaking.
-            </p>
-            <p>
-              I use modern AI-assisted development tools as part of my day-to-day workflow, the
-              same way I&apos;d use any other tool — to move faster on well-understood
-              problems, not as a substitute for understanding the system I&apos;m building.
-              Every decision and every line that ships is one I can explain.
-            </p>
-            <p>
-              I&apos;m continuing to build depth across the stack, with a particular interest
-              in SaaS architecture, developer experience and the practical parts of getting
-              products from an idea into something real users depend on.
+              I use AI-assisted tools to move faster, never as a substitute for understanding
+              what I&apos;m shipping — every decision I make is one I can explain. I&apos;m
+              continuing to build depth in SaaS architecture and developer experience, with a
+              focus on the practical parts of getting products in front of real users.
             </p>
           </Reveal>
         </div>
